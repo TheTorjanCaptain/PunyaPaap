@@ -14,6 +14,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column; /* Stack elements vertically */
         }
         .container {
             text-align: center;
@@ -21,6 +22,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Optional: limits container width */
         }
         .pipe-container {
             display: flex;
@@ -85,6 +88,20 @@
         </div>
     </div>
 
+    <div class="container mt-8"> <!-- Added margin-top for separation -->
+        <h2>The Flow of Paap and Punya in Hinduism</h2>
+        <p class="description">
+            In Hinduism, the concepts of <b>Paap</b> (sins) and <b>Punya</b> (virtues) represent the moral balance of human actions. They flow within us like substances in a pipe—what we add pushes out what is already there. This illustrates a profound truth: actions have consequences, and the good or bad we inject into our lives will eventually manifest outward.
+        </p>
+        <p class="description">
+            When we begin to accumulate <b>Punya</b> through righteous deeds, it starts displacing the <b>Paap</b> within us, purging the negative energy. Conversely, indulging in <b>Paap</b> will push out the accumulated <b>Punya</b>, reinforcing the importance of mindful choices. This dynamic flow emphasizes that our spiritual state is not static but is shaped by ongoing actions.
+        </p>
+        <p class="description">
+            Inspired by the teachings of <b>Premanand Ji Maharaj</b>, this theory reminds us that life is a continuous effort to maintain balance. By practicing kindness, compassion, and good deeds, we can cleanse ourselves of negativity and foster harmony both within and in the world around us.
+        </p>
+        <p class="footer"><b></b>Hari Hara Bol</b></p>
+    </div>
+
     <script>
         const pipe = document.getElementById("pipe");
         const maxBubbles = 10; // Max number of bubbles in the pipe
@@ -109,18 +126,5 @@
             }
         }
     </script>
-     <div class="container">
-        <h2>The Flow of Paap and Punya in Hinduism</h2>
-        <p class="description">
-            In Hinduism, the concepts of <b>Paap</b> (sins) and <b>Punya</b> (virtues) represent the moral balance of human actions. They flow within us like substances in a pipe—what we add pushes out what is already there. This illustrates a profound truth: actions have consequences, and the good or bad we inject into our lives will eventually manifest outward.
-        </p>
-        <p class="description">
-            When we begin to accumulate <b>Punya</b> through righteous deeds, it starts displacing the <b>Paap</b> within us, purging the negative energy. Conversely, indulging in <b>Paap</b> will push out the accumulated <b>Punya</b>, reinforcing the importance of mindful choices. This dynamic flow emphasizes that our spiritual state is not static but is shaped by ongoing actions.
-        </p>
-        <p class="description">
-            Inspired by the teachings of <b>Premanand Ji Maharaj</b>, this theory reminds us that life is a continuous effort to maintain balance. By practicing kindness, compassion, and good deeds, we can cleanse ourselves of negativity and foster harmony both within and in the world around us.
-        </p>
-        <p class="footer">Hari Hara Bol</p>
-    </div>
 </body>
 </html>
