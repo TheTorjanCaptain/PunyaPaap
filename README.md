@@ -1,4 +1,4 @@
 # PunyaPaap
 The repo is to show the outcome of our deeds.
-Inspired by the teachings of <b>Premanand Ji Maharaj</b>
-</b>Hari Hara Bol</b>
+<br>Inspired by the teachings of <b>Premanand Ji Maharaj</b></br>
+<br></b>Hari Hara Bol</b></br>
