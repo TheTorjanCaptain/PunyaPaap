@@ -3,111 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karma Concept</title>
+    <title>Paap and Punya - Inspired by U Theory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
         .container {
-            text-align: center;
-            background: white;
+            background: #fff;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            margin-bottom: 20px;
         }
         .pipe-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            width: 100%;
-            height: 50px;
             margin: 20px 0;
         }
         .pipe {
-            width: 300px;
-            height: 50px;
-            background: #d3d3d3;
-            border-radius: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: relative;
+            width: 300px;
+            height: 40px;
+            background-color: #e0e0e0;
+            border: 2px solid #000;
+            border-radius: 10px;
         }
-        .bubble {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
+        .entry, .exit {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 0.5s ease;
-        }
-        .paap {
-            background-color: red;
-        }
-        .punya {
-            background-color: green;
-        }
-        .label {
+            top: -30px;
             font-weight: bold;
+            font-size: 14px;
+        }
+        .entry {
+            left: -10px;
+        }
+        .exit {
+            right: -10px;
+        }
+        .description {
+            margin-top: 20px;
+            text-align: justify;
+            font-size: 14px;
+        }
+        .footer {
+            font-weight: bold;
+            margin-top: 20px;
             font-size: 16px;
-        }
-        .entry-label {
-            margin-right: 10px;
-        }
-        .exit-label {
-            margin-left: 10px;
+            color: #555;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="text-2xl font-bold mb-4">Straight Pipe: Karma Concept</h1>
-        <p>Add <span class="text-red-500 font-bold">Paap</span> or <span class="text-green-500 font-bold">Punya</span> to see the flow.</p>
-        
+        <h1>Paap and Punya Application</h1>
+        <p>This interactive design represents the flow of Paap (sins) and Punya (virtues) as described in Hindu philosophy.</p>
         <div class="pipe-container">
-            <span class="label entry-label">Entry</span>
-            <div class="pipe" id="pipe"></div>
-            <span class="label exit-label">Exit</span>
-        </div>
-        
-        <div class="flex justify-center space-x-4 mt-4">
-            <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" onclick="addBubble('paap')">Add Paap</button>
-            <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600" onclick="addBubble('punya')">Add Punya</button>
+            <div class="pipe">
+                <span class="entry">Entry</span>
+                <span class="exit">Exit</span>
+            </div>
         </div>
     </div>
-
-    <script>
-        const pipe = document.getElementById("pipe");
-        const maxBubbles = 10; // Max number of bubbles in the pipe
-
-        function addBubble(type) {
-            // Create a new bubble
-            const bubble = document.createElement("div");
-            bubble.classList.add("bubble", type);
-
-            // Add bubble to the start of the pipe
-            pipe.insertBefore(bubble, pipe.firstChild);
-
-            // Adjust the position of bubbles
-            const bubbles = Array.from(pipe.children);
-            bubbles.forEach((b, i) => {
-                b.style.left = `${i * 30}px`; // Spacing between bubbles
-            });
-
-            // Remove excess bubbles
-            if (bubbles.length > maxBubbles) {
-                pipe.removeChild(bubbles[bubbles.length - 1]);
-            }
-        }
-    </script>
+    <div class="container">
+        <h2>The Flow of Paap and Punya in Hinduism</h2>
+        <p class="description">
+            In Hinduism, the concepts of <b>Paap</b> (sins) and <b>Punya</b> (virtues) represent the moral balance of human actions. They flow within us like substances in a pipe—what we add pushes out what is already there. This illustrates a profound truth: actions have consequences, and the good or bad we inject into our lives will eventually manifest outward.
+        </p>
+        <p class="description">
+            When we begin to accumulate <b>Punya</b> through righteous deeds, it starts displacing the <b>Paap</b> within us, purging the negative energy. Conversely, indulging in <b>Paap</b> will push out the accumulated <b>Punya</b>, reinforcing the importance of mindful choices. This dynamic flow emphasizes that our spiritual state is not static but is shaped by ongoing actions.
+        </p>
+        <p class="description">
+            Inspired by the teachings of <b>Premanand Ji Maharaj</b>, this theory reminds us that life is a continuous effort to maintain balance. By practicing kindness, compassion, and good deeds, we can cleanse ourselves of negativity and foster harmony both within and in the world around us.
+        </p>
+        <p class="footer">Hari Hara Bol</p>
+    </div>
 </body>
 </html>
